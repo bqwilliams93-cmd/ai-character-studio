@@ -1,0 +1,23 @@
+{
+  "overview": "A beautiful AI character gallery and builder app. Browse a curated collection of AI woman character profiles, then create your own by customizing name, avatar style, personality, and traits through a smooth multi-step builder.",
+  "features": [
+    "Gallery of pre-made AI character cards with avatars, names, personality labels, and trait tags",
+    "Character detail view with full personality description and background",
+    "Filter gallery by personality type and traits with URL-persisted state",
+    "Search characters by name or keyword",
+    "3-step character builder: Basic Info, Personality, Preview & Save",
+    "Avatar style selector with visual previews",
+    "Trait library with 10+ predefined options",
+    "Mobile-responsive layout"
+  ],
+  "category": "entertainment",
+  "tags": [
+    "ai",
+    "characters",
+    "gallery",
+    "builder",
+    "creative",
+    "entertainment"
+  ],
+  "last_updated": "2026-04-17T19:45:49.583Z"
+}

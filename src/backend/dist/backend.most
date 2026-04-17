@@ -1,0 +1,39 @@
+// Version: 1.0.0
+type AvatarStyle__967587003 =
+  {#anime; #illustrated; #pixelArt; #realistic; #watercolor};
+type CharacterId__554017571 = Nat;
+type CharacterInternal__259595922 =
+  {
+    var avatarStyle : AvatarStyle__967587003;
+    var backgroundSnippet : Text;
+    createdAt : Int;
+    id : CharacterId__554017571;
+    isPreseeded : Bool;
+    var name : Text;
+    var personalityDescription : Text;
+    var personalityType : PersonalityType__472226795;
+    var traits : [Trait__913105749]
+  };
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type PersonalityType__472226795 =
+  {
+    #adventurous;
+    #analytical;
+    #creative;
+    #empathetic;
+    #extroverted;
+    #introverted;
+    #mysterious;
+    #playful
+  };
+type Trait__913105749 = Text;
+actor {
+  stable characters :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?CharacterInternal__259595922]];
+      var elementIndex : Nat__490723111
+    };
+  stable idCounter : [var Nat]
+};

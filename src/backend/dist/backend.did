@@ -1,0 +1,55 @@
+type Trait = text;
+type PersonalityType = 
+ variant {
+   adventurous;
+   analytical;
+   creative;
+   empathetic;
+   extroverted;
+   introverted;
+   mysterious;
+   playful;
+ };
+type CreateCharacterRequest = 
+ record {
+   avatarStyle: AvatarStyle;
+   backgroundSnippet: text;
+   name: text;
+   personalityDescription: text;
+   personalityType: PersonalityType;
+   traits: vec Trait;
+ };
+type CharacterId = nat;
+type CharacterFilter = 
+ record {
+   personalityType: opt PersonalityType;
+   searchQuery: opt text;
+   trait: opt Trait;
+ };
+type Character = 
+ record {
+   avatarStyle: AvatarStyle;
+   backgroundSnippet: text;
+   createdAt: int;
+   id: CharacterId;
+   isPreseeded: bool;
+   name: text;
+   personalityDescription: text;
+   personalityType: PersonalityType;
+   traits: vec Trait;
+ };
+type AvatarStyle = 
+ variant {
+   anime;
+   illustrated;
+   pixelArt;
+   realistic;
+   watercolor;
+ };
+service : {
+  createCharacter: (req: CreateCharacterRequest) -> (Character);
+  getCharacter: (id: CharacterId) -> (opt Character) query;
+  listCharacters: (filter: CharacterFilter) -> (vec Character) query;
+  listPersonalityTypes: () -> (vec PersonalityType) query;
+  listTraits: () -> (vec Trait) query;
+}
